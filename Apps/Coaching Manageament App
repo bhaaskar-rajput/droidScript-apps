@@ -414,25 +414,23 @@ class Main extends App
 		this.main_layout=ui.addLayout("main", "Linear", "VCenter", 1, 1)
 		var welcome_msg=app.GetData( "welcome_msg" )
 
-		this.login_page=ui.addLayout(this.main_layout, "Linear", "VCenter", 1, 1 )
+        	this.login_page=ui.addLayout(this.main_layout, "Linear", "VCenter", 1, 1 )
 		this.login_page.setChildMargins( 0.01, 0.01, 0.01, 0.01 )
 		
 		this.tfd_username = ui.addTextField( this.login_page, "", "Outlined,Secondary", 0.7 )
-        this.tfd_username.label = "Username"
-        this.tfd_username.setStartAdornment( "person", "Icon" )
+        	this.tfd_username.label = "Username"
+        	this.tfd_username.setStartAdornment( "person", "Icon" )
             
-        this.tfd_password = ui.addTextField( this.login_page, "", "Outlined,Secondary,Password", 0.7 )
-        this.tfd_password.label = "Password"
-        this.tfd_password.setStartAdornment( "lock", "Icon" )
-        this.tfd_password.setEndAdornment( "visibility_off", "Icon,Touchable" )
-        this.tfd_password.setEndAdornmentOnTouch( this.togglePasswordVisibility )
+        	this.tfd_password = ui.addTextField( this.login_page, "", "Outlined,Secondary,Password", 0.7 )
+        	this.tfd_password.label = "Password"
+        	this.tfd_password.setStartAdornment( "lock", "Icon" )
+        	this.tfd_password.setEndAdornment( "visibility_off", "Icon,Touchable" )
+        	this.tfd_password.setEndAdornmentOnTouch( this.togglePasswordVisibility )
                 
 		this.apb = ui.addAppBar( this.main_layout, welcome_msg, "Default" )
 		this.apb.setOnMenu( this.showDrawer )
 		this.tfd = ui.addTextField(this.apb.layout, "", "Search,Outlined,Small")
 		this.tfd.placeholder = "Search"
-
-        this.add
 	}
         togglePasswordVisibility()
         {
