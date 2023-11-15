@@ -1,4 +1,4 @@
-calss Main extends App
+class Main extends App
 {
-    
+
 }
